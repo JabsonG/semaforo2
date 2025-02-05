@@ -110,3 +110,6 @@ int main() {
 3. Pressione o botão para ativar a sequência de LEDs.
 4. Observe os LEDs apagando em sequência após serem acionados.
 
+## Observação: 
+O código foi simulado corretamente na placa BitDogLab como formar de aprendizado, no documento da tarefa não foi solicitado entrega de vídeo ou imagem
+
