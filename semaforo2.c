@@ -17,6 +17,11 @@
 // Variável de estado do sistema
 volatile bool sequence_active = false;
 
+// **Declaração das funções antes do uso**
+int64_t step2_callback(alarm_id_t id, void *user_data);
+int64_t step3_callback(alarm_id_t id, void *user_data);
+int64_t step4_callback(alarm_id_t id, void *user_data);
+
 // Callback para desligar 1 LED (mantendo 2 ligados)
 int64_t step2_callback(alarm_id_t id, void *user_data) {
     gpio_put(LED_BLUE, 0);  // Apaga o LED azul
@@ -57,8 +62,6 @@ void button_callback(uint gpio, uint32_t events) {
 }
 
 int main() {
-    //stdio_init_all();
-
     // Configuração dos LEDs como saída
     gpio_init(LED_BLUE);
     gpio_set_dir(LED_BLUE, GPIO_OUT);
